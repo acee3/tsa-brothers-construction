@@ -10,7 +10,7 @@ export default function Services()
     <ScrollView>
       <View style={styles.container}>
         <Image
-          source={{ uri: 'https://i.imgur.com/6jZxnwl.png' }}
+          source={{ uri: 'https://i.imgur.com/ZQgJDK1.jpg' }}
           style={styles.logo}
         />
         <Text style={styles.titleText}>Brothers Construction</Text>
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   logo: {
-    width: 200,
-    height: 200,
+    width: 625,
+    height: 180,
     marginBottom: 10,
   },
 });
