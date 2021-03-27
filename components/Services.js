@@ -3,9 +3,9 @@ import { Text, View, Image, StyleSheet, ScrollView, Alert } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { Card, ListItem, Icon, Divider, Button } from 'react-native-elements';
 import Products from "./products.json";
+import fire from '../fire';
 
-export default function Services()
-{
+export default function Services() {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -13,9 +13,8 @@ export default function Services()
           source={{ uri: 'https://i.imgur.com/ZQgJDK1.jpg' }}
           style={styles.logo}
         />
-        <Text style={styles.titleText}>Brothers Construction</Text>
       </View>
-      <Card>
+      <Card containerStyle={{ marginBottom: 70 }}>
         <Card.Title style={styles.subTitleText}>Service Selection</Card.Title>
         {Products.map((item, i) => (
           <ListItem key={i} bottomDivider>
@@ -28,10 +27,37 @@ export default function Services()
                 <AntDesign name="right" size={20} color="black" />
               }
               onPress={() => {
-                Alert.alert(
-                  item.price,
-                  item.description
-                )
+                fire.firestore()
+                  .collection('users')
+                  .doc(fire.auth().currentUser.uid)
+                  .collection('checkout')
+                  .add({
+                    productName: item.title,
+                    price: item.price,
+                  }).then(function () {
+                    fire.firestore()
+                      .collection('users')
+                      .doc(fire.auth().currentUser.uid)
+                      .get()
+                      .then(documentSnapshot => {
+                        if (!documentSnapshot.exists) {
+                          fire.firestore()
+                            .collection('users')
+                            .doc(fire.auth().currentUser.uid)
+                            .update({
+                              total: item.price,
+                            });
+                        } else {
+                          let curTotal = documentSnapshot.data().total;
+                          fire.firestore()
+                            .collection('users')
+                            .doc(fire.auth().currentUser.uid)
+                            .update({
+                              total: curTotal + item.price,
+                            });
+                        }
+                      })
+                  })
               }}
             />
           </ListItem>

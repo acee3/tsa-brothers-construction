@@ -1,132 +1,157 @@
 [
     {
       "title": "Drywall",
-      "price": 15,
+      "price": 400,
       "description": "hello"
     },
     {
       "title": "Wallpaper Removal",
-      "price": 15,
+      "price": 750,
       "description": "hello"
     },
     {
       "title": "Water Damage Repairs",
-      "price": 15,
+      "price": 2000,
       "description": "hello"
     },
     {
       "title": "Re-caulking",
-      "price": 15,
+      "price": 250,
       "description": "hello"
     },
     {
       "title": "Deck Maintenance",
-      "price": 15,
+      "price": 700,
       "description": "hello"
     },
     {
       "title": "Wood Rot Repair",
-      "price": 15,
+      "price": 200,
       "description": "hello"
     },
     {
       "title": "Ceiling Repair",
-      "price": 15,
+      "price": 750,
       "description": "hello"
     },
     {
       "title": "Repair of Screens",
-      "price": 15,
+      "price": 110,
       "description": "hello"
     },
     {
-      "title": "Kitchens",
-      "price": 15,
+      "title": "Kitchen Renovation",
+      "price": 20000,
       "description": "hello"
     },
     {
-      "title": "Bathrooms",
-      "price": 15,
+      "title": "Bathroom Renovation",
+      "price": 35000,
       "description": "hello"
     },
     {
-      "title": "Bedrooms",
-      "price": 15,
+      "title": "Bedroom Renovation",
+      "price": 7900,
       "description": "hello"
     },
     {
-      "title": "Flooring (Tile, Laminate, Vinyl, Wood)",
-      "price": 15,
+      "title": "Flooring",
+      "price": 5000,
       "description": "hello"
     },
     {
       "title": "Basement Finishing",
-      "price": 15,
+      "price": 50000,
       "description": "hello"
     },
     {
       "title": "Closet Organization Systems",
-      "price": 15,
+      "price": 1500,
       "description": "hello"
     },
     {
       "title": "Painting",
-      "price": 15,
+      "price": 500,
       "description": "hello"
     },
     {
-      "title": "Bi-fold Doors",
-      "price": 15,
+      "title": "Bi-fold Doors Installation",
+      "price": 130,
       "description": "hello"
     },
     {
-      "title": "Exhaust Fans",
-      "price": 15,
+      "title": "Exhaust Fans Installation",
+      "price": 100,
       "description": "hello"
     },
     {
-      "title": "Garbage Disposal",
-      "price": 15,
+      "title": "Garbage Disposal Installation",
+      "price": 100,
       "description": "hello"
     },
     {
       "title": "Glass Installation",
-      "price": 15,
+      "price": 50,
       "description": "hello"
     },
     {
       "title": "Window Treatments",
-      "price": 15,
+      "price": 110,
       "description": "hello"
     },
     {
       "title": "Handicap Accessibility",
-      "price": 15,
+      "price": 1000,
       "description": "hello"
     },
     {
       "title": "Shelving",
-      "price": 15,
+      "price": 360,
       "description": "hello"
     },
     {
       "title": "Wall Mounting of TVs",
-      "price": 15,
+      "price": 100,
       "description": "hello"
     },
     {
-      "title": "Windows",
-      "price": 15,
+      "title": "Windows Installation",
+      "price": 100,
       "description": "hello"
     },
     {
       "title": "Child proofing",
-      "price": 15,
+      "price": 500,
       "description": "hello"
     },
     {
       "title": "Pet Doors",
-      "price": 15,
+      "price": 200,
+      "description": "hello"
+    },
+    {
+      "title": "Window Air Conditioning",
+      "price": 300,
+      "description": "hello"
+    },
+    {
+      "title": "Smoke Detectors",
+      "price": 100,
+      "description": "hello"
+    },
+    {
+      "title": "Mailboxes",
+      "price": 285,
+      "description": "hello"
+    },
+    {
+      "title": "Winterizing",
+      "price": 200,
+      "description": "hello"
+    },
+    {
+      "title": "Driveway Sealing",
+      "price": 300,
       "description": "hello"
     }
   ]

@@ -7,9 +7,9 @@ const Login = (props) => {
     return (
         <section className='login'>
             <div className='loginContainer'>
-                <label>Username</label>
+                <label>Email</label>
                 <input type="text" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)} />
-                <p>{emailError}</p>
+                <p className='errorMsg'>{emailError}</p>
                 <label>Password</label>
                 <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} />
                 <p className='errorMsg'>{passwordError}</p>
