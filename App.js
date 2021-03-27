@@ -46,7 +46,16 @@ export default function App() {
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .catch(err => {
+      .then(function (data) {
+        fire.firestore()
+          .collection('users')
+          .doc(data.user.uid)
+          .set({
+            total: 0,
+            email: data.user.email,
+            admin: false,
+          });
+      }).catch(err => {
         switch (err.code) {
           case "auth/email-already-in-use":
           case "auth/invalid-email":
@@ -81,9 +90,9 @@ export default function App() {
   return (
     <NavigationContainer>
       {user ? (
-        <Tabs handleLogout={handleLogout}/>
+        <Tabs handleLogout={handleLogout} />
       ) : (
-        <Login email={email} setEmail={setEmail} password={password} setPassword={setPassword} handleLogin={handleLogin} handleSignup={handleSignup} hasAccount={hasAccount} setHasAccount={setHasAccount} emailError={emailError} passwordError={passwordError}/>
+        <Login email={email} setEmail={setEmail} password={password} setPassword={setPassword} handleLogin={handleLogin} handleSignup={handleSignup} hasAccount={hasAccount} setHasAccount={setHasAccount} emailError={emailError} passwordError={passwordError} />
       )}
     </NavigationContainer>
   );
