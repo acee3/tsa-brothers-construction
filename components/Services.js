@@ -7,7 +7,7 @@ import fire from '../fire';
 
 export default function Services() {
   return (
-    <ScrollView>
+    <ScrollView contentContainerStyle={styles.scrollView}>
       <View style={styles.container}>
         <Image
           source={{ uri: 'https://i.imgur.com/ZQgJDK1.jpg' }}
@@ -21,6 +21,7 @@ export default function Services() {
             <Icon name={item.icon} />
             <ListItem.Content>
               <ListItem.Title>{item.title}</ListItem.Title>
+              <ListItem.Subtitle>{'$'+item.price}</ListItem.Subtitle>
             </ListItem.Content>
             <Button
               icon={
@@ -68,6 +69,12 @@ export default function Services() {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    marginHorizontal: 20,
+    marginTop: 10,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -77,5 +84,6 @@ const styles = StyleSheet.create({
     width: 625,
     height: 180,
     marginBottom: 10,
+    marginTop: 10,
   },
 });
