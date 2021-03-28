@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Text, View, Image, StyleSheet, ScrollView, Alert } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { MaterialCommunityIcons, Feather, FontAwesome } from '@expo/vector-icons';
+import { MaterialCommunityIcons, Feather, FontAwesome, Foundation } from '@expo/vector-icons';
 import fire from '../fire';
 
 import Services from "./Services.js";
@@ -9,6 +9,7 @@ import Checkout from "./Checkout.js";
 import Orders from "./Orders.js";
 import Account from "./Account.js";
 import ManageOrders from "./ManageOrders.js";
+import About from './About';
 
 const Tab = createBottomTabNavigator();
 
@@ -30,7 +31,7 @@ export default function MyTabs(props) {
       <Tab.Navigator
         initialRouteName="ManageOrders"
         tabBarOptions={{
-          activeTintColor: '#a83232',
+          activeTintColor: '#ce0000',
           labelStyle: {
             paddingBottom: 5,
             fontSize: 14,
@@ -67,9 +68,9 @@ export default function MyTabs(props) {
   } else {
     return (
       <Tab.Navigator
-        initialRouteName="Services"
+        initialRouteName="About"
         tabBarOptions={{
-          activeTintColor: '#a83232',
+          activeTintColor: '#ce0000',
           labelStyle: {
             paddingBottom: 5,
             fontSize: 14,
@@ -81,6 +82,16 @@ export default function MyTabs(props) {
             right: 0,
           },
         }}>
+        <Tab.Screen
+          name="About"
+          component={About}
+          options={{
+            tabBarLabel: 'About',
+            tabBarIcon: ({ color, size }) => (
+              <Foundation name="magnifying-glass" size={size} color={color} />
+            ),
+          }}
+        />
         <Tab.Screen
           name="Services"
           component={Services}

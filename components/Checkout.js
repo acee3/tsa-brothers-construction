@@ -43,27 +43,27 @@ export default function Checkout() {
   }
 
   return (
-    <ScrollView contentContainerStyle={styles.scrollView}>
+    <ScrollView contentContainerStyle={{alignItems: 'center'}}>
       <View style={styles.container}>
         <Image
           source={{ uri: 'https://i.imgur.com/ZQgJDK1.jpg' }}
           style={styles.logo}
         />
       </View>
-      <Card>
-        <Card.Title style={styles.subTitleText}>Checkout</Card.Title>
+      <Card containerStyle={{width: '75%'}}>
+        <Card.Title style={styles.titleText}>Service Selection</Card.Title>
         {services.length > 0 ? services.map((item, i) => (
           <ListItem key={i} bottomDivider>
-            <ListItem.Content>
-              <ListItem.Title>{item.productName}</ListItem.Title>
-              <ListItem.Subtitle>{'$'+item.price}</ListItem.Subtitle>
+            <ListItem.Content style={{alignItems: 'center'}}>
+              <ListItem.Title styles={styles.readText}>{item.productName}</ListItem.Title>
             </ListItem.Content>
           </ListItem>
-        )) : 'No Order'}
+        )) : <View style={{alignItems: 'center'}}><Text style={styles.readText}>No Orders</Text></View>}
       </Card>
-      <Card containerStyle={{ marginBottom: 70 }}>
-        <Card.Title style={styles.subTitleText}>Estimated Price: ${total}</Card.Title>
+      <Card containerStyle={{ marginBottom: 70, width: '75%' }}>
+        <Card.Title style={styles.titleText}>Estimated Price: ${total}</Card.Title>
         <Button
+          buttonStyle={styles.buttonSquare}
           title='Submit Order'
           onPress={() => {
             if (services.length > 0) {
@@ -101,14 +101,9 @@ export default function Checkout() {
 }
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    marginHorizontal: 20,
-    marginTop: 10,
-  },
   container: {
     flex: 1,
+    width: '100%',
     backgroundColor: '#fff',
     alignItems: 'center',
   },
@@ -116,6 +111,47 @@ const styles = StyleSheet.create({
     width: 625,
     height: 180,
     marginBottom: 10,
-    marginTop: 10,
   },
+  button: {
+    backgroundColor: '#ce0000',
+    borderWidth: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    marginRight: 20
+  },
+  buttonIcon: {
+    alignItems: 'center'
+  },
+  buttonSquare: {
+    backgroundColor: '#ce0000',
+    borderWidth: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 5,
+    marginRight: 5
+  },
+  buttonSquareCancel: {
+    backgroundColor: '#545454',
+    borderWidth: 0,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 5,
+    marginRight: 5
+  },
+  modal: {
+    position: 'absolute', justifyContent: 'center', alignItems: 'center'
+  },
+  modalContent: {
+    position: 'absolute', backgroundColor: 'white', padding: 40, marginBottom: 30, lineHeight: '80%', width: '100%', maxWidth: '420px', justifyContent: 'center', alignItems: 'center'
+  },
+  readText: {
+    fontSize: 20
+  },
+  titleText: {
+    fontSize: 25,
+    color: '#ce0000'
+  }
 });

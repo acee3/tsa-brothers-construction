@@ -1,43 +1,30 @@
-import React, { useState, useEffect  } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, View, Image, StyleSheet, ScrollView, FlatList, ActivityIndicator } from 'react-native';
 import { Card, ListItem, Icon, Divider, Button } from 'react-native-elements';
+import { Modal, Portal, Provider } from 'react-native-paper';
+import { AntDesign } from '@expo/vector-icons';
 import fire from '../fire';
 
-const Account = (props) => {
-  const [email, setEmail] = useState('');
-
-  useEffect(() => {
-    const subscriber = fire.firestore()
-      .collection('users')
-      .doc(fire.auth().currentUser.uid)
-      .onSnapshot(documentSnapshot => {
-        setEmail(documentSnapshot.data().email)
-      });
-    return () => subscriber();
-  }, []);
-
+export default function About() {
   return (
-    <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
-      <View style={styles.container}>
+    <Provider>
+      <View style={{position: 'absolute', alignItems: 'center', width: '100%', height: '100%'}}>
         <Image
-          source={{ uri: 'https://i.imgur.com/ZQgJDK1.jpg' }}
-          style={styles.logo}
+          source={{uri: 'https://www.immigration.ca/wp-content/uploads/2012/12/New-Brunswick_250833833.jpeg'}}
+          style={{flex: 1, resizeMode: 'contain'}}
         />
       </View>
-      <Card containerStyle={{ marginBottom: 70, width: '50%' }}>
-        <Card.Title style={styles.titleText}>Account Details</Card.Title>
-        <View style={{marginBottom: 30, alignItems: 'center'}}><Text style={styles.readText}>{'Currently logged in as: ' + email}</Text></View>
-        <Button
-          buttonStyle={styles.buttonSquare}
-          title='Logout'
-          onPress={props.handleLogout}
+      < ScrollView contentContainerStyle={{ alignItems: 'center' }}>
+      <View style={{position: 'absolute', alignItems: 'center', width: '100%', height: '100%'}}>
+        <Image
+          source={{uri: 'https://www.immigration.ca/wp-content/uploads/2012/12/New-Brunswick_250833833.jpeg'}}
+          style={{flex: 1, resizeMode: 'contain'}}
         />
-      </Card>
-    </ScrollView>
-  );
+      </View>
+      </ScrollView >
+    </Provider>
+  )
 }
-
-export default Account;
 
 const styles = StyleSheet.create({
   container: {
@@ -45,6 +32,8 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#fff',
     alignItems: 'center',
+    flexDirection: 'row',
+    marginBottom: 100
   },
   logo: {
     width: 625,

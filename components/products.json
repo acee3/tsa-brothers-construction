@@ -1,157 +1,147 @@
 [
     {
       "title": "Drywall",
-      "price": 400,
-      "description": "hello"
+      "price": 1000,
+      "perPrice": 1.9,
+      "measurement": "Square Feet"
     },
     {
       "title": "Wallpaper Removal",
       "price": 750,
-      "description": "hello"
+      "perPrice": 3,
+      "measurement": "Square Feet"
     },
     {
       "title": "Water Damage Repairs",
       "price": 2000,
-      "description": "hello"
+      "perPrice": 4,
+      "measurement": "Square Feet"
     },
     {
       "title": "Re-caulking",
       "price": 250,
-      "description": "hello"
+      "perPrice": 2.4,
+      "measurement": "Linear Feet"
     },
     {
       "title": "Deck Maintenance",
       "price": 700,
-      "description": "hello"
+      "perPrice": 2,
+      "measurement": "Square Feet"
     },
     {
       "title": "Wood Rot Repair",
-      "price": 200,
-      "description": "hello"
+      "price": 200
     },
     {
       "title": "Ceiling Repair",
-      "price": 750,
-      "description": "hello"
+      "price": 750
     },
     {
       "title": "Repair of Screens",
       "price": 110,
-      "description": "hello"
+      "perPrice": 20,
+      "measurement": "Number of Windows"
     },
     {
       "title": "Kitchen Renovation",
-      "price": 20000,
-      "description": "hello"
+      "price": 20000
     },
     {
       "title": "Bathroom Renovation",
-      "price": 35000,
-      "description": "hello"
+      "price": 35000
     },
     {
       "title": "Bedroom Renovation",
-      "price": 7900,
-      "description": "hello"
+      "price": 7900
     },
     {
       "title": "Flooring",
-      "price": 5000,
-      "description": "hello"
+      "price": 3000,
+      "types": ["Laminate", "Hardwood"],
+      "perPrices": [4, 7],
+      "measurement": "Square Feet"
     },
     {
       "title": "Basement Finishing",
-      "price": 50000,
-      "description": "hello"
+      "price": 50000
     },
     {
       "title": "Closet Organization Systems",
-      "price": 1500,
-      "description": "hello"
+      "price": 1500
     },
     {
       "title": "Painting",
       "price": 500,
-      "description": "hello"
+      "perPrice": 2,
+      "measurement": "Square Feet"
     },
     {
       "title": "Bi-fold Doors Installation",
-      "price": 130,
-      "description": "hello"
+      "price": 130
     },
     {
       "title": "Exhaust Fans Installation",
-      "price": 100,
-      "description": "hello"
+      "price": 100
     },
     {
       "title": "Garbage Disposal Installation",
-      "price": 100,
-      "description": "hello"
+      "price": 100
     },
     {
       "title": "Glass Installation",
-      "price": 50,
-      "description": "hello"
+      "price": 50
     },
     {
       "title": "Window Treatments",
-      "price": 110,
-      "description": "hello"
+      "price": 110
     },
     {
       "title": "Handicap Accessibility",
-      "price": 1000,
-      "description": "hello"
+      "price": 1000
     },
     {
       "title": "Shelving",
       "price": 360,
-      "description": "hello"
+      "perPrice": 0.26,
+      "measurement": "Linear Feet"
     },
     {
       "title": "Wall Mounting of TVs",
-      "price": 100,
-      "description": "hello"
+      "price": 100
     },
     {
       "title": "Windows Installation",
-      "price": 100,
-      "description": "hello"
+      "price": 300,
+      "perPrice": 300,
+      "measurement": "Number of Windows"
     },
     {
       "title": "Child proofing",
-      "price": 500,
-      "description": "hello"
+      "price": 500
     },
     {
       "title": "Pet Doors",
-      "price": 200,
-      "description": "hello"
+      "price": 200
     },
     {
       "title": "Window Air Conditioning",
-      "price": 300,
-      "description": "hello"
+      "price": 300
     },
     {
       "title": "Smoke Detectors",
-      "price": 100,
-      "description": "hello"
+      "price": 100
     },
     {
       "title": "Mailboxes",
-      "price": 285,
-      "description": "hello"
+      "price": 285
     },
     {
       "title": "Winterizing",
-      "price": 200,
-      "description": "hello"
+      "price": 200
     },
     {
       "title": "Driveway Sealing",
-      "price": 300,
-      "description": "hello"
+      "price": 300
     }
   ]
