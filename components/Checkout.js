@@ -43,7 +43,7 @@ export default function Checkout() {
   }
 
   return (
-    <ScrollView>
+    <ScrollView contentContainerStyle={styles.scrollView}>
       <View style={styles.container}>
         <Image
           source={{ uri: 'https://i.imgur.com/ZQgJDK1.jpg' }}
@@ -51,11 +51,12 @@ export default function Checkout() {
         />
       </View>
       <Card>
-        <Card.Title style={styles.subTitleText}>Service Selection</Card.Title>
+        <Card.Title style={styles.subTitleText}>Checkout</Card.Title>
         {services.length > 0 ? services.map((item, i) => (
           <ListItem key={i} bottomDivider>
             <ListItem.Content>
               <ListItem.Title>{item.productName}</ListItem.Title>
+              <ListItem.Subtitle>{'$'+item.price}</ListItem.Subtitle>
             </ListItem.Content>
           </ListItem>
         )) : 'No Order'}
@@ -100,6 +101,12 @@ export default function Checkout() {
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    marginHorizontal: 20,
+    marginTop: 10,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
@@ -109,5 +116,6 @@ const styles = StyleSheet.create({
     width: 625,
     height: 180,
     marginBottom: 10,
+    marginTop: 10,
   },
 });
